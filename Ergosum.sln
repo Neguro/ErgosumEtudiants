@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ergosum", "Ergosum\Ergosum.csproj", "{45E99234-A4AA-4135-AB0B-9EAB0AA1C5ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45E99234-A4AA-4135-AB0B-9EAB0AA1C5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E99234-A4AA-4135-AB0B-9EAB0AA1C5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E99234-A4AA-4135-AB0B-9EAB0AA1C5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E99234-A4AA-4135-AB0B-9EAB0AA1C5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B352A50-E556-4F66-B46D-4A9513B272EE}
+	EndGlobalSection
+EndGlobal
