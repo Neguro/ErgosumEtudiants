@@ -47,7 +47,7 @@ namespace Ergosum.ClassesMetier
         /// <returns>retourne une chaîne de caractères</returns>
         public string GetInfos()
         {
-            return $"Libellé : {this.libelle};\nCatégorie: {this.categ.Libelle};\nAge min: {this.tranche.AgeMin};\nAge max:{this.tranche.AgeMax}";
+            return $"Libellé : {this.libelle}; Catégorie: {this.categ.Libelle}; Age min: {this.tranche.AgeMin}; Age max: {this.tranche.AgeMax}";
         }  
         
         public int Numero { get => numero;  }

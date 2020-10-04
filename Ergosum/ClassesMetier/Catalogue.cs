@@ -27,13 +27,13 @@ namespace Ergosum.ClassesMetier
         /// <returns></returns>
         public int QuantitéDistribuée()
         {
-            // TODO : implémenter cette méthode
-            // TODO : changer le return
-            return 0;
+            int nbJouets = 0;
+            foreach(Jouet unJouet in this.lesJouets.DonnerToutesLesCles()) // pour parcourir le dictionnaire (ref : sujet Ergosum classe Dictionnaire) 
+            {
+                nbJouets += this.lesJouets.DonnerValeur(unJouet);
+            }
+            return nbJouets;
         }
-
- 
-       public int Annee { get => annee; }
 
         /// <summary>
         /// Retourne un dictionnaire contenant pour chaque catégorie de ce catalogue :
@@ -44,7 +44,15 @@ namespace Ergosum.ClassesMetier
         public Dictionnaire<Categorie, int> StatCateg() {
             // TODO : implémenter cette méthode
             // TODO : changer le return
-            return null;
+            Dictionnaire<Categorie, int> unDictionnaire = new Dictionnaire<Categorie, int>();
+            foreach(Jouet unJouet in this.lesJouets.DonnerToutesLesCles())
+            {
+                if(!unDictionnaire.ContainsKey(unJouet.Categ))
+                {
+                    unDictionnaire.Ajouter(unJouet.Categ,this.QuantitéDistribuée());
+                }
+            }
+            return unDictionnaire;
         }
 
         /// <summary>
@@ -58,6 +66,7 @@ namespace Ergosum.ClassesMetier
             this.lesJouets.Ajouter(unjouet, qteDistribuee);
         }
 
+        public int Annee { get => annee; }
 
     }
 }

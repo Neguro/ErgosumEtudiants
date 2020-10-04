@@ -43,9 +43,15 @@ namespace Ergosum.ClassesMetier
         /// <returns></returns>
         public Collection<Jouet> JouetTranche(int age)
         {
-            // TODO : implémenter cette méthode
-            // TODO : changer le return
-            return null;
+            Collection<Jouet> uneCollection = new Collection<Jouet>();
+            foreach(Jouet unJouet in this.lesJouets)
+            {
+                if(unJouet.Convient(age))
+                {
+                    uneCollection.Add(unJouet);
+                }
+            }
+            return uneCollection;
         }
     }
 }
