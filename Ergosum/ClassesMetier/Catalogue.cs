@@ -47,9 +47,13 @@ namespace Ergosum.ClassesMetier
             Dictionnaire<Categorie, int> unDictionnaire = new Dictionnaire<Categorie, int>();
             foreach(Jouet unJouet in this.lesJouets.DonnerToutesLesCles())
             {
-                if(!unDictionnaire.ContainsKey(unJouet.Categ))
+                if(!unDictionnaire.Existe(unJouet.Categ))
                 {
-                    unDictionnaire.Ajouter(unJouet.Categ,this.QuantitéDistribuée());
+                    unDictionnaire.Ajouter(unJouet.Categ, this.lesJouets.DonnerValeur(unJouet));
+                }
+                else
+                {
+                    unDictionnaire.Modifier(unJouet.Categ, (unDictionnaire.DonnerValeur(unJouet.Categ) + this.lesJouets.DonnerValeur(unJouet)));
                 }
             }
             return unDictionnaire;
